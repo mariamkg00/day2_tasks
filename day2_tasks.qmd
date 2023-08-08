@@ -41,3 +41,15 @@ ggplot()+
        title= 'Palmer Penguins body dimensions') +
   theme_minimal()
 ```
+
+Making a jitter plot of flipper length by species (x-axis :species, y- axis : flipper length)
+
+```{r}
+ggplot()+ 
+  geom_jitter(data =penguins, aes(x = species, y= flipper_length_mm, color= species ))+
+  labs(x='Species', 
+       y= 'Flipper Length (mm)',
+       title= 'Palmer Penguins body dimensions') +
+  theme_minimal()
+
+```
