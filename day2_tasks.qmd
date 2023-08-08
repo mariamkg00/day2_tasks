@@ -1,0 +1,10 @@
+---
+title: "day2_tasks"
+---
+
+Attaching the tidyverse and palmer penguins packages.
+
+```{r}
+library('tidyverse')
+library('palmerpenguins')
+```
