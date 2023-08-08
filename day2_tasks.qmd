@@ -8,3 +8,36 @@ Attaching the tidyverse and palmer penguins packages.
 library('tidyverse')
 library('palmerpenguins')
 ```
+
+Finding the derivative expression and slope at the indicated value for each of the following functions in R.
+
+```{r}
+#finding the slope of f(x)= x^2 at x=3
+fx<-expression(x^2)
+df_dx <-D(fx, 'x')
+x<-3
+eval(df_dx)
+```
+
+```{r}
+#Finding the slope of P(a)=2*(3a+2)^4 −5 at a=1.2
+
+pa <-expression(2*(3*a+2)^4 -5)
+dp_da <-D(pa, 'a')
+
+a<-1.2
+eval(dp_da)
+```
+
+Making another penguin plot of penguin bill length vs. bill depth.
+
+(point color dependent on species)
+
+```{r}
+ggplot()+ 
+  geom_point(data =penguins, aes(x = bill_length_mm, y= bill_depth_mm, color= species ))+
+  labs(x='Bill Length (mm)', 
+       y= 'Bill Depth (mm)',
+       title= 'Palmer Penguins body dimensions') +
+  theme_minimal()
+```
